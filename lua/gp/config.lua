@@ -103,71 +103,12 @@ local config = {
 			disable = true,
 		},
 		{
-			name = "ChatGPT4o",
-			chat = true,
-			command = false,
-			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = require("gp.defaults").chat_system_prompt,
-		},
-		{
-			provider = "openai",
-			name = "ChatGPT4o-mini",
-			chat = true,
-			command = false,
-			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4o-mini", temperature = 1.1, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = require("gp.defaults").chat_system_prompt,
-		},
-		{
 			provider = "copilot",
 			name = "ChatCopilot",
 			chat = true,
 			command = false,
 			-- string with model name or table with model name and parameters
 			model = { model = "gpt-4o", temperature = 1.1, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = require("gp.defaults").chat_system_prompt,
-		},
-		{
-			provider = "googleai",
-			name = "ChatGemini",
-			chat = true,
-			command = false,
-			-- string with model name or table with model name and parameters
-			model = { model = "gemini-pro", temperature = 1.1, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = require("gp.defaults").chat_system_prompt,
-		},
-		{
-			provider = "pplx",
-			name = "ChatPerplexityLlama3.1-8B",
-			chat = true,
-			command = false,
-			-- string with model name or table with model name and parameters
-			model = { model = "llama-3.1-sonar-small-128k-chat", temperature = 1.1, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = require("gp.defaults").chat_system_prompt,
-		},
-		{
-			provider = "anthropic",
-			name = "ChatClaude-3-5-Sonnet",
-			chat = true,
-			command = false,
-			-- string with model name or table with model name and parameters
-			model = { model = "claude-3-5-sonnet-20240620", temperature = 0.8, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = require("gp.defaults").chat_system_prompt,
-		},
-		{
-			provider = "anthropic",
-			name = "ChatClaude-3-Haiku",
-			chat = true,
-			command = false,
-			-- string with model name or table with model name and parameters
-			model = { model = "claude-3-haiku-20240307", temperature = 0.8, top_p = 1 },
 			-- system prompt (use this to specify the persona/role of the AI)
 			system_prompt = require("gp.defaults").chat_system_prompt,
 		},
@@ -202,26 +143,6 @@ local config = {
 			system_prompt = "You are a general AI assistant.",
 		},
 		{
-			provider = "openai",
-			name = "CodeGPT4o",
-			chat = false,
-			command = true,
-			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4o", temperature = 0.8, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = require("gp.defaults").code_system_prompt,
-		},
-		{
-			provider = "openai",
-			name = "CodeGPT4o-mini",
-			chat = false,
-			command = true,
-			-- string with model name or table with model name and parameters
-			model = { model = "gpt-4o-mini", temperature = 0.7, top_p = 1 },
-			-- system prompt (use this to specify the persona/role of the AI)
-			system_prompt = "Please return ONLY code snippets.\nSTART AND END YOUR ANSWER WITH:\n\n```",
-		},
-		{
 			provider = "copilot",
 			name = "CodeCopilot",
 			chat = false,
@@ -232,42 +153,6 @@ local config = {
 			system_prompt = require("gp.defaults").code_system_prompt,
 		},
 		{
-			provider = "googleai",
-			name = "CodeGemini",
-			chat = false,
-			command = true,
-			-- string with model name or table with model name and parameters
-			model = { model = "gemini-pro", temperature = 0.8, top_p = 1 },
-			system_prompt = require("gp.defaults").code_system_prompt,
-		},
-		{
-			provider = "pplx",
-			name = "CodePerplexityLlama3.1-8B",
-			chat = false,
-			command = true,
-			-- string with model name or table with model name and parameters
-			model = { model = "llama-3.1-sonar-small-128k-chat", temperature = 0.8, top_p = 1 },
-			system_prompt = require("gp.defaults").code_system_prompt,
-		},
-		{
-			provider = "anthropic",
-			name = "CodeClaude-3-5-Sonnet",
-			chat = false,
-			command = true,
-			-- string with model name or table with model name and parameters
-			model = { model = "claude-3-5-sonnet-20240620", temperature = 0.8, top_p = 1 },
-			system_prompt = require("gp.defaults").code_system_prompt,
-		},
-		{
-			provider = "anthropic",
-			name = "CodeClaude-3-Haiku",
-			chat = false,
-			command = true,
-			-- string with model name or table with model name and parameters
-			model = { model = "claude-3-haiku-20240307", temperature = 0.8, top_p = 1 },
-			system_prompt = require("gp.defaults").code_system_prompt,
-		},
-		{
 			provider = "ollama",
 			name = "CodeOllamaLlama3.1-8B",
 			chat = false,
@@ -275,7 +160,7 @@ local config = {
 			-- string with model name or table with model name and parameters
 			model = {
 				model = "llama3.1",
-				temperature = 0.4,
+				temperature = 0.2,
 				top_p = 1,
 				min_p = 0.05,
 			},
