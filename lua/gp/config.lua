@@ -104,12 +104,27 @@ local config = {
 		},
 		{
 			provider = "ollama",
-			name = "GandalfBaum/deepseek_r1-claude3.7:latest",
+			name = "deepseek_r1-claude3.7:latest",
 			chat = true,
 			command = false,
 			-- string with model name or table with model name and parameters
 			model = {
-				model = "llama3.1",
+				model = "GandalfBaum/deepseek_r1-claude3.7:latest",
+				temperature = 0.6,
+				top_p = 1,
+				min_p = 0.05,
+			},
+			-- system prompt (use this to specify the persona/role of the AI)
+			system_prompt = "You are a general AI assistant.",
+		},
+		{
+			provider = "ollama",
+			name = "GandalfBaum/llama3.2-claude3.7:latest",
+			chat = true,
+			command = false,
+			-- string with model name or table with model name and parameters
+			model = {
+				model = "GandalfBaum/llama3.2-claude3.7:latest",
 				temperature = 0.6,
 				top_p = 1,
 				min_p = 0.05,
@@ -124,7 +139,7 @@ local config = {
 			command = true,
 			-- string with model name or table with model name and parameters
 			model = {
-				model = "llama3.1",
+				model = "deepseek-r1:32b",
 				temperature = 0.2,
 				top_p = 1,
 				min_p = 0.05,
@@ -139,7 +154,7 @@ local config = {
 			command = true,
 			-- string with model name or table with model name and parameters
 			model = {
-				model = "llama3.1",
+				model = "qwq:latest",
 				temperature = 0.2,
 				top_p = 1,
 				min_p = 0.05,
